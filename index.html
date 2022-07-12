@@ -19,11 +19,11 @@
     <body>
         <div class="container">
             <!-- Slider -->
-            <div class="slider" id="root">
+            <div class="slider" id="root" @mouseover="isAutoplay = false" @mouseleave="isAutoplay = true">
                 <!-- Slideshow -->
                 <div class="slideshow">
                     <!-- Gallery -->
-                    <div class="gallery" @mouseover="isAutoplay = false" @mouseleave="isAutoplay = true">
+                    <div class="gallery">
                         <figure v-for="(item, i) in figures" :class="{'active' : currentActiveIndex === i}">
                             <img :src="item.url" :alt="item.title" />
                             <figcaption>
@@ -33,10 +33,10 @@
                         </figure>
                     </div>
                     <!-- Controls -->
-                    <div class="control-container prev" @click="prevFigure()">
+                    <div class="control-container prev" @click="prevFigure">
                         <i class="fa-solid fa-angle-left"></i>
                     </div>
-                    <div class="control-container next" @click="nextFigure()">
+                    <div class="control-container next" @click="nextFigure">
                         <i class="fa-solid fa-angle-right"></i>
                     </div>
                 </div>
