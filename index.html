@@ -33,17 +33,11 @@
                         </figure>
                     </div>
                     <!-- Controls -->
-                    <div class="control-container prev" id="prev-arrow">
+                    <div class="control-container prev" @click="prevFigure()">
                         <i class="fa-solid fa-angle-left"></i>
                     </div>
-                    <div class="control-container next" id="next-arrow">
+                    <div class="control-container next" @click="nextFigure()">
                         <i class="fa-solid fa-angle-right"></i>
-                    </div>
-                    <div class="autoplay-container">
-                        <i class="fa-regular fa-circle-play hidden" id="play-button"></i>
-                        <i class="fa-regular fa-circle-stop" id="pause-button"></i>
-                        <i class="fa-solid fa-angles-left" id="left-direction-button"></i>
-                        <i class="fa-solid fa-angles-right hidden" id="right-direction-button"></i>
                     </div>
                 </div>
                 <!-- Thumbnails -->

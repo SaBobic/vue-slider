@@ -34,4 +34,14 @@ const root = new Vue({
         ],
         currentActiveIndex: 0,
     },
+    methods: {
+        prevFigure() {
+            this.currentActiveIndex--;
+            if (this.currentActiveIndex < 0) this.currentActiveIndex = this.figures.length - 1;
+        },
+        nextFigure() {
+            this.currentActiveIndex++;
+            if (this.currentActiveIndex === this.figures.length) this.currentActiveIndex = 0;
+        },
+    },
 });
