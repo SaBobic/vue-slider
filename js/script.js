@@ -33,6 +33,7 @@ const root = new Vue({
             },
         ],
         currentActiveIndex: 0,
+        isAutoplay: true,
     },
     methods: {
         prevFigure() {
@@ -43,5 +44,13 @@ const root = new Vue({
             this.currentActiveIndex++;
             if (this.currentActiveIndex === this.figures.length) this.currentActiveIndex = 0;
         },
+        autoplay() {
+            setInterval(() => {
+                this.isAutoplay ? this.nextFigure() : clearInterval(autoplay);
+            }, 3000);
+        },
+    },
+    mounted() {
+        this.autoplay();
     },
 });

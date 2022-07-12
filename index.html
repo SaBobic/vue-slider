@@ -23,7 +23,7 @@
                 <!-- Slideshow -->
                 <div class="slideshow">
                     <!-- Gallery -->
-                    <div class="gallery">
+                    <div class="gallery" @mouseover="isAutoplay = false" @mouseleave="isAutoplay = true">
                         <figure v-for="(item, i) in figures" :class="{'active' : currentActiveIndex === i}">
                             <img :src="item.url" :alt="item.title" />
                             <figcaption>
