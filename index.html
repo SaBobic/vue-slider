@@ -42,7 +42,7 @@
                 </div>
                 <!-- Thumbnails -->
                 <div class="thumb">
-                    <figure v-for="(item, i) in figures" :class="{'active' : currentActiveIndex === i}">
+                    <figure v-for="(item, i) in figures" :class="{'active' : currentActiveIndex === i}" @click="currentActiveIndex = i">
                         <div>
                             <img :src="item.url" :alt="item.title" />
                         </div>
