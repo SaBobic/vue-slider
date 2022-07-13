@@ -44,6 +44,9 @@ const root = new Vue({
             this.currentActiveIndex++;
             if (this.currentActiveIndex === this.figures.length) this.currentActiveIndex = 0;
         },
+        thisFigure(index) {
+            this.currentActiveIndex = index;
+        },
         autoplay() {
             setInterval(() => {
                 this.isAutoplay ? this.nextFigure() : clearInterval(autoplay);
